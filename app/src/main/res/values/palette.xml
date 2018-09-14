@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_wisteria">@color/colorPrimary</color>
+    <color name="trendy_pink">@color/colorPrimaryDark</color>
+    <color name="pink_lace">@color/colorPrimaryLight</color>
+    <color name="prelude">@color/colorSecondary</color>
+    <color name="amethyst_smoke">@color/colorSecondaryDark</color>
+    <color name="tutu">@color/colorSecondaryLight</color>
+    <color name="black">@color/colorText</color>
+    <color name="amaranth">@color/colorAccent</color>
+</resources>

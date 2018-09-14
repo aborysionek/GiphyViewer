@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Giphy Viewer</string>
+    <string name="moving">moving</string>
+    <string name="still">static</string>
+    <string name="static_screen">static screen</string>
+    <string name="moving_screen">moving screen</string>
+    <string name="fav_only">Favourites only</string>
+    <string name="creator">App by Adrian Borysionek</string>
+    <string name="content_description_gif">A gif</string>
+    <string name="click_to_like">Long click to like!</string>
+</resources>

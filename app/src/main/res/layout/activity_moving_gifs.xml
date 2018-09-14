@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    tools:context=".ui.moving.MovingGifs"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switchFavourites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin6dp"
+        android:alpha="0.4"
+        app:trackTint="@color/colorPrimaryDark"
+        app:thumbTint="@color/colorPrimaryLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvSwitchFavourites"
+        app:layout_constraintBottom_toBottomOf="@id/tvSwitchFavourites"
+        app:layout_constraintTop_toTopOf="@id/tvSwitchFavourites"
+        />
+
+    <TextView
+        android:id="@+id/tvSwitchFavourites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin6dp"
+        android:fontFamily="@font/raleway"
+        android:text="@string/fav_only"
+        android:textColor="@color/colorText"
+        app:layout_constraintTop_toTopOf="@id/tvMovingTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tvMovingTitle"
+        app:layout_constraintStart_toEndOf="@id/switchFavourites"
+        />
+
+    <TextView
+        android:id="@+id/tvMovingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:text="@string/moving_screen"
+        android:textAllCaps="true"
+        android:textColor="@color/colorText"
+        app:layout_constraintEnd_toStartOf="@id/buttonGoStill"
+        app:layout_constraintStart_toEndOf="@id/tvSwitchFavourites"
+        app:layout_constraintTop_toTopOf="@id/buttonGoStill"
+        app:layout_constraintBottom_toBottomOf="@id/buttonGoStill"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        style="@style/Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:id="@+id/buttonGoStill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin6dp"
+        android:layout_marginTop="@dimen/margin6dp"
+        android:background="@drawable/button_round"
+        android:text="@string/still"
+        android:textColor="@color/colorText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMoving"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingEnd="@dimen/margin6dp"
+        android:paddingStart="@dimen/margin6dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/buttonGoStill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animMovingProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/progressbar_animation"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:layout_constraintStart_toStartOf="@id/rvMoving"
+        app:layout_constraintEnd_toEndOf="@id/rvMoving"
+        app:layout_constraintTop_toTopOf="@id/rvMoving"
+        app:layout_constraintBottom_toBottomOf="@id/rvMoving"
+        />
+
+</android.support.constraint.ConstraintLayout>
